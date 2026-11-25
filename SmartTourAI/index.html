@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartTour AI | Smart Tourism</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+          rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVBAR
+    =========================================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ✦
+            </div>
+
+            <div>
+                <strong>SmartTour</strong>
+                <span>AI</span>
+            </div>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="#home" class="active">
+                Home
+            </a>
+
+            <a href="#places">
+                Explore
+            </a>
+
+            <a href="#route">
+                Routes
+            </a>
+
+            <a href="#recommendations">
+                Recommendations
+            </a>
+
+            <a href="#how">
+                How it Works
+            </a>
+
+        </div>
+
+
+        <button
+            class="nav-button"
+            onclick="scrollToRoute()">
+
+            ✈ Plan My Trip →
+
+        </button>
+
+    </nav>
+
+
+
+    <!-- ==========================================
+         NEW HERO SECTION
+    =========================================== -->
+
+    <section class="hero-new" id="home">
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="hero-new-left">
+
+
+            <div class="travel-note">
+
+                ✦ AI-POWERED SMART TOURISM
+
+            </div>
+
+
+            <h1>
+
+                Discover India's
+
+                <span>
+                    Hidden Gems.
+                </span>
+
+            </h1>
+
+
+            <p class="hero-new-description">
+
+                Your smart travel companion for discovering
+                amazing places, finding optimal routes and
+                getting personalized recommendations.
+
+            </p>
+
+
+            <!-- SMART SEARCH -->
+
+            <div class="hero-search-box">
+
+                <span class="hero-search-icon">
+                    📍
+                </span>
+
+
+                <input
+                    type="text"
+                    id="heroSearch"
+                    placeholder="Search destinations, cities or experiences..."
+                >
+
+
+                <button
+                    onclick="heroSearchDestination()">
+
+                    🔍
+
+                </button>
+
+            </div>
+
+
+            <!-- CATEGORY CHIPS -->
+
+            <div class="hero-chips">
+
+                <button>
+                    🔥 Popular
+                </button>
+
+                <button>
+                    🏛️ Historical
+                </button>
+
+                <button>
+                    🌿 Nature
+                </button>
+
+                <button>
+                    🍜 Food
+                </button>
+
+                <button>
+                    🛍️ Shopping
+                </button>
+
+            </div>
+
+
+            <!-- HERO STATS -->
+
+            <div class="hero-new-stats">
+
+
+                <div class="hero-stat">
+
+                    <span class="hero-stat-icon">📍</span>
+
+                    <strong>
+                        22+
+                    </strong>
+
+                    <span>
+                        Amazing Destinations
+                    </span>
+
+                </div>
+
+
+                <div class="hero-stat">
+
+                    <span class="hero-stat-icon">🔗</span>
+
+                    <strong>
+                        100+
+                    </strong>
+
+                    <span>
+                        Smart Routes
+                    </span>
+
+                </div>
+
+
+                <div class="hero-stat">
+
+                    <span class="hero-stat-icon">⭐</span>
+
+                    <strong>
+                        AI
+                    </strong>
+
+                    <span>
+                        Personalized Ideas
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ======================================
+             RIGHT HERO VISUAL
+        ======================================= -->
+
+        <div class="hero-new-right">
+
+
+            <div class="india-glow">
+            </div>
+
+            <div class="hero-doodle doodle-left">
+                Explore<br>India <span>♥</span>
+            </div>
+
+            <div class="hero-doodle doodle-right">
+                Same Country<br>Endless Stories <span>♥</span>
+            </div>
+
+
+            <!-- MAIN MAP CARD -->
+
+            <div class="india-map-card">
+
+
+                <div class="map-lines">
+                </div>
+
+
+                <!-- MAP ROUTE -->
+
+                <div class="map-route-line">
+                </div>
+
+
+                <!-- CENTER AI -->
+
+                <div class="map-center-logo">
+                    ✦
+                </div>
+
+
+                <!-- DESTINATION PINS -->
+
+                <div class="map-destination taj-pin">
+                    <span>📍</span>
+                </div>
+
+                <div class="map-destination red-pin">
+                    <span>📍</span>
+                </div>
+
+                <div class="map-destination qutub-pin">
+                    <span>📍</span>
+                </div>
+
+                <div class="map-destination varanasi-pin">
+                    <span>📍</span>
+                </div>
+
+                <div class="map-destination prem-pin">
+                    <span>📍</span>
+                </div>
+
+                <div class="map-destination india-gate-pin">
+                    <span>📍</span>
+                </div>
+
+
+            </div>
+
+
+<!-- POLAROID 1 -->
+
+<div class="polaroid polaroid-one">
+
+    <img
+        src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=700&q=85"
+        alt="Taj Mahal"
+    >
+
+    <strong>Taj Mahal</strong>
+
+    <small>Agra</small>
+
+</div>
+
+
+<!-- POLAROID 2 -->
+
+<div class="polaroid polaroid-two">
+
+    <img
+        src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=700&q=85"
+        alt="Red Fort"
+    >
+
+    <strong>Red Fort</strong>
+
+    <small>Delhi</small>
+
+</div>
+
+
+<!-- POLAROID 3 -->
+
+<div class="polaroid polaroid-three">
+
+    <img
+        src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Varanasi_ghat.jpg"
+        alt="Varanasi Ghats"
+    >
+
+    <strong>Varanasi</strong>
+
+    <small>Uttar Pradesh</small>
+
+</div>
+
+
+<!-- MINI DESTINATION CARD 1 -->
+
+<div class="mini-destination mini-qutub">
+
+    <img
+        src="https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=300&q=85"
+        alt="Qutub Minar"
+    >
+
+    <div>
+        <strong>Qutub Minar</strong>
+        <small>Delhi</small>
+    </div>
+
+</div>
+
+
+<!-- MINI DESTINATION CARD 2 -->
+
+<div class="mini-destination mini-prem">
+
+    <img
+        src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=300&q=85"
+        alt="Prem Mandir"
+    >
+
+    <div>
+        <strong>Prem Mandir</strong>
+        <small>Vrindavan</small>
+    </div>
+
+</div>
+
+
+<!-- MINI DESTINATION CARD 3 -->
+
+<div class="mini-destination mini-india">
+
+    <img
+        src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=300&q=85"
+        alt="India Gate"
+    >
+
+    <div>
+        <strong>India Gate</strong>
+        <small>Delhi</small>
+    </div>
+
+</div>
+
+
+
+            <!-- ==================================
+                 AI FLOAT CARD
+            =================================== -->
+
+            <div class="ai-float-card">
+
+
+                <div class="ai-icon">
+
+                    <span>✨</span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Smart Recommendation
+                    </strong>
+
+                    <small>
+                        Personalized for you
+                    </small>
+
+                </div>
+
+
+                <span class="ai-arrow">›</span>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==========================================
+         FEATURE STRIP
+    =========================================== -->
+
+    <section class="feature-strip">
+
+
+        <div class="feature-item">
+
+            <div class="feature-icon">
+                📍
+            </div>
+
+            <div>
+
+                <strong>
+                    Explore
+                </strong>
+
+                <p>
+                    Find interesting places
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="feature-item">
+
+            <div class="feature-icon">
+                🧭
+            </div>
+
+            <div>
+
+                <strong>
+                    Optimize
+                </strong>
+
+                <p>
+                    Find efficient routes
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="feature-item">
+
+            <div class="feature-icon">
+                ✨
+            </div>
+
+            <div>
+
+                <strong>
+                    Personalize
+                </strong>
+
+                <p>
+                    Get smart suggestions
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="feature-item">
+
+            <div class="feature-icon">
+                ⭐
+            </div>
+
+            <div>
+
+                <strong>
+                    Discover
+                </strong>
+
+                <p>
+                    Explore hidden gems
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==========================================
+         DESTINATIONS
+    =========================================== -->
+
+    <section
+        class="section"
+        id="places">
+
+
+        <div class="section-heading">
+
+
+            <div>
+
+                <div class="mini-title">
+                    EXPLORE INDIA
+                </div>
+
+                <h2>
+
+                    Popular
+                    <span>
+                        Destinations
+                    </span>
+
+                </h2>
+
+                <p class="section-sub">
+                    Discover the most loved places across India and plan your next adventure.
+                </p>
+
+            </div>
+
+
+            <button class="view-all">
+
+                View All →
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- SEARCH -->
+
+        <div class="destination-search">
+
+
+            <span>
+                🔎
+            </span>
+
+
+            <input
+                type="text"
+                id="placeSearch"
+                placeholder="Search destinations..."
+            >
+
+
+            <button
+                onclick="searchPlaces()">
+
+                Search
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- DESTINATION CARDS GENERATED BY JS -->
+
+        <div class="destination-grid">
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==========================================
+         ROUTE OPTIMIZER
+    =========================================== -->
+
+    <section
+        class="route-section"
+        id="route">
+
+
+        <div class="route-content">
+
+
+            <div class="mini-title">
+
+                SMART ROUTE OPTIMIZER
+
+            </div>
+
+
+            <h2>
+
+                Find the
+                <span>
+                    best way
+                </span>
+
+                <br>
+
+                to your destination.
+
+            </h2>
+
+
+            <p>
+
+                Our graph-based route engine will help you
+                find an efficient path between tourist locations.
+
+            </p>
+
+
+
+            <!-- ROUTE FORM -->
+
+            <div class="route-form">
+
+
+                <!-- FROM -->
+
+                <div class="route-input">
+
+                    <label>
+                        FROM
+                    </label>
+
+
+                    <select id="startLocation">
+
+                        <option value="">
+                            Choose starting point
+                        </option>
+
+                        <option>
+                            India Gate
+                        </option>
+
+                        <option>
+                            Red Fort
+                        </option>
+
+                        <option>
+                            Qutub Minar
+                        </option>
+
+                        <option>
+                            Humayun's Tomb
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- ARROW -->
+
+                <div class="route-arrow">
+                    →
+                </div>
+
+
+
+                <!-- TO -->
+
+                <div class="route-input">
+
+                    <label>
+                        TO
+                    </label>
+
+
+                    <select id="destination">
+
+                        <option value="">
+                            Choose destination
+                        </option>
+
+                        <option>
+                            India Gate
+                        </option>
+
+                        <option>
+                            Red Fort
+                        </option>
+
+                        <option>
+                            Qutub Minar
+                        </option>
+
+                        <option>
+                            Humayun's Tomb
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- FIND ROUTE -->
+
+                <button
+                    class="route-button"
+                    onclick="findRoute()">
+
+                    Find Route →
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- ROUTE RESULT -->
+
+            <div
+                id="routeResult"
+                class="route-result">
+
+
+                <div class="algorithm-badge">
+
+                    ⚡ Dijkstra Ready
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+
+                        Select locations to calculate your route
+
+                    </h3>
+
+
+                    <p>
+
+                        The route engine will calculate an optimal path.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==========================================
+         RECOMMENDATIONS
+    =========================================== -->
+
+    <section
+        class="section recommendations"
+        id="recommendations">
+
+
+        <div class="mini-title">
+
+            PERSONALIZED FOR YOU
+
+        </div>
+
+
+        <h2>
+
+            What do you want to
+            <span>
+                explore?
+            </span>
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Select your interests and SmartTour AI will
+            suggest suitable destinations.
+
+        </p>
+
+
+
+        <div class="interest-grid">
+
+
+            <button class="interest-card">
+
+                <span>
+                    🏛️
+                </span>
+
+                <strong>
+                    History
+                </strong>
+
+                <small>
+                    Heritage & monuments
+                </small>
+
+            </button>
+
+
+
+            <button class="interest-card">
+
+                <span>
+                    🌿
+                </span>
+
+                <strong>
+                    Nature
+                </strong>
+
+                <small>
+                    Parks & scenic places
+                </small>
+
+            </button>
+
+
+
+            <button class="interest-card">
+
+                <span>
+                    🍜
+                </span>
+
+                <strong>
+                    Food
+                </strong>
+
+                <small>
+                    Local cuisine
+                </small>
+
+            </button>
+
+
+
+            <button class="interest-card">
+
+                <span>
+                    🛍️
+                </span>
+
+                <strong>
+                    Shopping
+                </strong>
+
+                <small>
+                    Markets & malls
+                </small>
+
+            </button>
+
+
+
+            <button class="interest-card">
+
+                <span>
+                    🛕
+                </span>
+
+                <strong>
+                    Culture
+                </strong>
+
+                <small>
+                    Local experiences
+                </small>
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==========================================
+         HOW IT WORKS
+    =========================================== -->
+
+    <section
+        class="how-section"
+        id="how">
+
+
+        <div class="mini-title">
+
+            HOW IT WORKS
+
+        </div>
+
+
+        <h2>
+
+            From search to
+            <span>
+                smart travel.
+            </span>
+
+        </h2>
+
+
+
+        <div class="steps">
+
+
+            <!-- STEP 01 -->
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <div class="step-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    Search
+                </h3>
+
+                <p>
+
+                    Search for tourist places
+                    and destinations.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- STEP 02 -->
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <div class="step-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Analyze
+                </h3>
+
+                <p>
+
+                    System analyzes locations,
+                    ratings and preferences.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- STEP 03 -->
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div class="step-icon">
+                    🗺️
+                </div>
+
+                <h3>
+                    Optimize
+                </h3>
+
+                <p>
+
+                    Graph algorithms calculate
+                    efficient routes.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- STEP 04 -->
+
+            <div class="step">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <div class="step-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Explore
+                </h3>
+
+                <p>
+
+                    Get personalized suggestions
+                    and start exploring.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer>
+
+
+        <div class="footer-logo">
+
+            ✦ SmartTour
+            <span>
+                AI
+            </span>
+
+        </div>
+
+
+        <p>
+
+            AI-Based Smart Tourism Information System
+
+        </p>
+
+
+        <div class="footer-bottom">
+
+            Built for Smart Cities • SDG 11
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         DESTINATION DETAILS MODAL
+    =========================================== -->
+
+    <div
+        class="destination-modal"
+        id="destinationModal">
+
+
+        <div class="modal-box">
+
+
+            <!-- CLOSE -->
+
+            <button
+                class="modal-close"
+                onclick="closeDestinationModal()">
+
+                ×
+
+            </button>
+
+
+
+            <!-- IMAGE -->
+
+            <div
+                class="modal-image"
+                id="modalImage">
+
+
+                <span id="modalLocation">
+
+                    📍 Agra
+
+                </span>
+
+
+            </div>
+
+
+
+            <!-- CONTENT -->
+
+            <div class="modal-content">
+
+
+                <div class="modal-title-row">
+
+
+                    <div>
+
+                        <h2 id="modalTitle">
+
+                            Taj Mahal
+
+                        </h2>
+
+
+                        <p id="modalCategory">
+
+                            Historical • Heritage
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div
+                        class="modal-rating"
+                        id="modalRating">
+
+                        ⭐ 4.9
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- DESCRIPTION -->
+
+                <div
+                    class="modal-description"
+                    id="modalDescription">
+
+
+                    <div class="description-point">
+
+                        <span>
+                            01
+                        </span>
+
+                        <p>
+
+                            Explore one of India's most
+                            iconic historical landmarks.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="description-point">
+
+                        <span>
+                            02
+                        </span>
+
+                        <p>
+
+                            Experience beautiful architecture
+                            and rich cultural heritage.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="description-point">
+
+                        <span>
+                            03
+                        </span>
+
+                        <p>
+
+                            Enjoy a memorable and peaceful
+                            sightseeing experience.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- DETAILS -->
+
+                <div class="modal-details">
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            🕐
+                        </span>
+
+
+                        <div>
+
+                            <small>
+                                Best Time
+                            </small>
+
+                            <strong>
+                                Morning
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="detail-item">
+
+                        <span>
+                            💰
+                        </span>
+
+
+                        <div>
+
+                            <small>
+                                Budget
+                            </small>
+
+                            <strong>
+                                ₹₹
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ROUTE -->
+
+                <button
+                    class="route-btn"
+                    onclick="planRoute()">
+
+                    🗺️ Plan Route →
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ==========================================
+         MYSTERIOUS FACTS MODAL
+    =========================================== -->
+
+    <div
+        class="facts-modal"
+        id="factsModal">
+    </div>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="js/destinations.js"></script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
